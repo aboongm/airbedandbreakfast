@@ -1,6 +1,45 @@
-$airbnb-logo: #ff385c;
+@import '_colors';
+
+// $airbnb-logo: #ff385c;
 .logo__link {
   svg {
     color: $airbnb-logo;
   }
+}
+
+.airbnb__profile,
+.airbnb__search {
+  display: flex;
+  padding: 5px 5px 5px 12px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid lightgray;
+  border-radius: 21px;
+}
+
+.airbnb__avatar {
+  color: gray;
+  flex: 0 0 30px;
+  height: 30px;
+  overflow: hidden;
+  position: relative;
+  width: 30px;
+  z-index: 1;
+}
+
+.airbnb__hamburger {
+  width: 30px;
+}
+
+.header__left {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+  align-items: center;
+  height: 80px;
+}
+.header__right {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
 }
