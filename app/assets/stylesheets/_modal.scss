@@ -359,6 +359,31 @@
   -webkit-appearance: button;
 }
 
+.form__button__span {
+  position: absolute !important;
+  top: 0px !important;
+  left: 0px !important;
+  right: 0px !important;
+  bottom: 0px !important;
+  width: 100% !important;
+  height: 100% !important;
+  -webkit-mask-image: -webkit-radial-gradient(center, white, black) !important;
+  overflow: hidden !important;
+  border-radius: 8px !important;
+}
+
+.form__button__span1 {
+  display: block !important;
+  position: relative !important;
+  pointer-events: none !important;
+}
+
+.form__button__text {
+  display: block !important;
+  position: relative !important;
+  pointer-events: none !important;
+}
+
 .modal__line__container {
   width: 100% !important;
   margin-top: 16px !important;
@@ -453,4 +478,88 @@
 
 .oauth__style {
   flex: 0 1 0% !important;
+}
+
+.form__email__container {
+  position: relative !important;
+  cursor: text !important;
+  display: flex !important;
+  min-height: 56px !important;
+  width: 100% !important;
+  margin: 0px !important;
+  border: none !important;
+  color: rgb(34, 34, 34) !important;
+  background-color: rgb(255, 255, 255) !important;
+  border-radius: 8px !important;
+  border: 1px solid lightgray !important;
+  //   box-shadow: rgb(176 176 176) 0px 0px 0px 1px inset !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    'Helvetica Neue', sans-serif !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  font-weight: 400 !important;
+}
+
+.form__email__label {
+  position: relative !important;
+  flex: 1 1 0% !important;
+  padding: 0px !important;
+}
+
+.form__email__text__container {
+  position: absolute !important;
+  top: 18px !important;
+  left: 12px !important;
+  right: 12px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  color: rgb(113, 113, 113) !important;
+  pointer-events: none !important;
+  transform-origin: 0% 0% !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    'Helvetica Neue', sans-serif !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  font-weight: 400 !important;
+  transition: -ms-transform 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s,
+    -webkit-transform 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s,
+    transform 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s !important;
+}
+
+.form__email__text {
+  max-width: 100% !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.form__email__input__container {
+  display: flex !important;
+  opacity: 0 !important;
+  -webkit-box-direction: normal !important;
+}
+
+.form__email__input {
+  width: 100% !important;
+  border: none !important;
+  outline: none !important;
+  padding: 0px !important;
+  margin: 26px 12px 6px !important;
+  min-height: 1px !important;
+  color: inherit !important;
+  background-color: transparent !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  appearance: none !important;
+}
+
+.form__email__style {
+  margin-top: 8px !important;
+}
+
+.form__email__button__container {
+  margin-top: 16px !important;
+  margin-bottom: 24px !important;
 }
