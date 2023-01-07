@@ -1,0 +1,35 @@
+<section>
+  <div class="modal_header__container">
+    <div class="modal__header__close">
+      <button aria-label="Close" type="button" class="czcfm7x dir dir-ltr">
+        <span class="i1h5tsj6 dir dir-ltr">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
+            <path d="m6 6 20 20"></path>
+            <path d="m26 6-20 20"></path>
+          </svg>
+        </span>
+      </button>
+    </div>
+    <header class="modal__header">
+      <div class="modal__header__left"></div>
+      <div class="modal__header__center">
+        <h1 tabindex="-1" class="_14i3z6h" elementtiming="LCP-target">
+          <div class="_1q9sh65">Log in or sign up</div>
+        </h1>
+      </div>
+      <div class="modal__header__right"></div>
+    </header>
+  </div>
+  <div class="modal__container">
+    <div data-testid="login-pane">
+      <div class="modal__heading">
+        <h3 class="modal__heading__text">Welcome to Airbnb</h3>
+      </div>
+      <%= render 'shared/country_code' %>
+      <div class="modal__line__container">
+        <div class="modal__line">or</div>
+      </div>
+      <%= render 'shared/oauth' %>
+    </div>
+  </div>
+</section>
