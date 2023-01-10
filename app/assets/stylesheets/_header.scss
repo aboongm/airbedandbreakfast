@@ -43,3 +43,19 @@
   justify-content: flex-end;
   flex: 1;
 }
+
+.invalid-inset-input-text-field {
+  border-color: rgb(244, 61, 94) !important;
+
+  label {
+    color: rgb(244, 61, 94) !important;
+  }
+
+  input[type='email'],
+  [type='text'] {
+    &:focus {
+      border-color: rgb(244, 61, 94) !important;
+    }
+    color: rgb(244, 61, 94) !important;
+  }
+}
