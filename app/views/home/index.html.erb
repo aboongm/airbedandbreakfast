@@ -1,15 +1,9 @@
-<h1 class="text-3xl font-bold underline">
+<h3 class="text-3xl font-bold underline">
   Hello world!
-</h1>
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
+</h3>
+<% if current_user %>
+  <p class="text-xl">
+    You are logged in
+  </p>
+<% end  %>
+<%= button_to 'logout', destroy_user_session_path, method: :delete  %>
