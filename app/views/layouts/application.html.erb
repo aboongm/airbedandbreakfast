@@ -5,19 +5,16 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-
     <%= favicon_link_tag asset_path('airbnb_favicon.ico') %>
     <title>Holiday Homes & Apartment Rentals - Airbnb - Airbnb</title>
   </head>
-
   <body>
     <%= render "layouts/header" %>
-    <main>
-      <%= yield %>        
-    </main>
     <%= render 'shared/modal' %>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>

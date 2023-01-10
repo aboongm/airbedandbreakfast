@@ -1,19 +1,16 @@
-<form action="" method="POST" novalidate="" data-testid="auth-form">
-  <input type="hidden" name="authenticity_token" value="V4$.airbnb.co.in$92RXNCQle8A$ky5iCjy9z1NjanEBd9zL9UCajtI27nNr_j7Gs0n3a04=" />
-  <input type="hidden" name="from" value="email_login" />
-  <input type="hidden" name="airlock_id" value="" />
+<%# <form data-controller="users-by-email-auth" action="" method="POST" >
   <div>
     <div class="form__email__container">
-      <label class="form__email__label" for="email-login-email">
-        <div class="form__email__text__container">
+      <div class="form__email__label" for="email">
+        <label class="form__email__text__container">
           <div class="form__email__text">Email</div>
-        </div>
+        </label>
         <div dir="ltr">
           <div class="form__email__input__container">
-            <input placeholder="Email" name="user[email]" data-testid="email-login-email" aria-required="true" class="form__email__input" id="email-login-email" autocomplete="off" inputmode="email" type="email" aria-describedby="email-login-email-InputField-help" value="" />
+            <input type="text" name="email" id="email" class="form__email__input" />
           </div>
         </div>
-      </label>
+      </div>
     </div>
     <div class="form__email__style"></div>
   </div>
@@ -26,4 +23,15 @@
       <span class="form__button__text">Continue </span>
     </button>
   </div>
-</form>
+</form> %>
+<div data-controller="users-by-email-auth">
+  <form >
+    <div class="mt-6 border border-gray-300 rounded-md px-3 pt-1 shadow-sm focus-within:ring-1 focus-within:ring-black focus-within:border-black">
+      <label for="email" class="block text-xs font-medium text-gray-900">Email</label>
+      <input data-users-by-email-auth-target="email" type="text" name="email" id="email" autocomplete="email" placeholder="Email" class="block w-full border-0 p=0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" />
+    </div>
+    <div class="my-5 sm:my-6">
+      <button data-users-by-email-auth-target="submit" type="button" class="form__button w-full inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white focus:outline-none focus:ring-2 focus:ring-offset-2 airbnb-pink-gradient">Continue</button>
+    </div>
+  </form>
+</div>

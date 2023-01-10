@@ -1,7 +1,7 @@
 module Api
-    class UsersController < ApplicationController
+    class UsersByEmailsController < ApplicationController
         def show
-            user = User.find(params[:id])
+            user = User.find_by!(email: params[:email])
 
             respond_to do |format|
                 format.json do
