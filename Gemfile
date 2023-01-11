@@ -41,6 +41,7 @@ group :development, :test do
   gem "factory_bot_rails", "~> 6.2"
   gem 'pry-rails'
   gem "rspec-rails", "~> 6.0"
+  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
 end
 
 group :development do
@@ -59,8 +60,11 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem "shoulda-matchers", "~> 5.3"
 end
 
 
 
 gem "devise", "~> 4.8"
+
+

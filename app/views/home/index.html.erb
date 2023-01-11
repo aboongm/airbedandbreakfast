@@ -1,9 +1,12 @@
-<h3 class="text-3xl font-bold underline">
-  Hello world!
-</h3>
-<% if current_user %>
-  <p class="text-xl">
-    You are logged in
-  </p>
-<% end  %>
-<%= button_to 'logout', destroy_user_session_path, method: :delete  %>
+<div class="flex">
+  <% @properties.each do |property| %>
+    <div>
+      <p><%= property.name %></p>
+      <p><%= property.headline %></p>
+      <p><%= property.description %></p>
+      <p><%= property.city %></p>
+      <p><%= property.state %></p>
+      <p><%= property.country %></p>
+    </div>
+  <% end %>
+</div>
