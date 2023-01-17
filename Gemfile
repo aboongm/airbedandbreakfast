@@ -66,5 +66,4 @@ end
 
 
 gem "devise", "~> 4.8"
-
-
+gem "geocoder", "~> 1.8"
