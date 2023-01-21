@@ -10,40 +10,40 @@ export default class extends Controller {
       isEmpty(this.element.dataset.longitude)
     ) {
       window.navigator.geolocation.getCurrentPosition((pos) => {
-        this.element.dataset.latitude = pos.coords.latitude;
-        this.element.dataset.longitude = pos.coords.longitude;
-
-        this.propertyTargets.forEach((propertyTarget) => {
-          let distanceFrom = getDistance(
-            { latitude: pos.coords.latitude, longitude: pos.coords.longitude },
-            {
-              latitude: propertyTarget.dataset.latitude,
-              longitude: propertyTarget.dataset.longitude,
-            }
-          );
-          let distance = convertDistance(distanceFrom, 'km');
-          propertyTarget.querySelector(
-            '[data-distance-away]'
-          ).innerHTML = `${Math.ceil(distance)} kms away`;
-        });
+        this.setUserCoordinates(pos.coords);
+        this.setDistanceText();
       });
     } else {
-      this.propertyTargets.forEach((propertyTarget) => {
-        let distanceFrom = getDistance(
-          {
-            latitude: this.element.dataset.latitude,
-            longitude: this.element.dataset.longitude,
-          },
-          {
-            latitude: propertyTarget.dataset.latitude,
-            longitude: propertyTarget.dataset.longitude,
-          }
-        );
-        let distance = convertDistance(distanceFrom, 'km');
-        propertyTarget.querySelector(
-          '[data-distance-away]'
-        ).innerHTML = `${Math.ceil(distance)} kms away`;
-      });
+      this.setDistanceText();
     }
+  }
+
+  setUserCoordinates(coordinates) {
+    this.element.dataset.latitude = coordinates.latitude;
+    this.element.dataset.longitude = coordinates.longitude;
+  }
+
+  getUserCoordinates() {
+    return {
+      latitude: this.element.dataset.latitude,
+      longitude: this.element.dataset.longitude,
+    };
+  }
+
+  setDistanceText() {
+    this.propertyTargets.forEach((propertyTarget) => {
+      let distanceFrom = getDistance(
+        this.getUserCoordinates(),
+
+        {
+          latitude: propertyTarget.dataset.latitude,
+          longitude: propertyTarget.dataset.longitude,
+        }
+      );
+      let distance = convertDistance(distanceFrom, 'km');
+      propertyTarget.querySelector(
+        '[data-distance-away]'
+      ).innerHTML = `${Math.ceil(distance)} kms away`;
+    });
   }
 }
