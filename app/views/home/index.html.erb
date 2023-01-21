@@ -23,7 +23,7 @@
         </p>
         <p data-distance-away class="block text-sm font-medium text-gray-500 pointer-events-none"></p>
         <p class="block text-sm font-medium text-gray-500 pointer-events-none">June 19-24</p>
-        <p class="block text-sm font-medium text-gray-500 pointer-events-none">$172 per night</p>
+        <p class="block text-sm font-medium text-gray-500 pointer-events-none"><%= humanized_money_with_symbol(property.price) %> per night</p>
       </li>
     <% end %>
   </ul>

@@ -67,3 +67,4 @@ end
 
 gem "devise", "~> 4.8"
 gem "geocoder", "~> 1.8"
+gem "money-rails", "~> 1.15"
