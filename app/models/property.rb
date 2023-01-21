@@ -8,14 +8,19 @@ class Property < ApplicationRecord
     validates :country, presence: true
 
     monetize :price_cents, allow_nil: true
-
     
     geocoded_by :address
     # after_validation :geocode, if: ->(obj){ obj.address_1.present? and obj.address_changed? }
     after_validation :geocode, if: -> { latitude.blank? && longitude.blank? }
-    
+
+    has_many_attached :images
+
     def address
         #  [address_1, address_2, city, state, country].compact.join(', ')
          [state, country].compact.join(', ')
+    end
+
+    def default_image
+        images.first
     end
 end
