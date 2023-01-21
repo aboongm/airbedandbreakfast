@@ -11,3 +11,4 @@ pin "#lib/adapters/http.js", to: "https://ga.jspm.io/npm:axios@0.27.2/lib/adapte
 pin "#lib/defaults/env/FormData.js", to: "https://ga.jspm.io/npm:axios@0.27.2/lib/helpers/null.js"
 pin "buffer", to: "https://ga.jspm.io/npm:@jspm/core@2.0.0-beta.24/nodelibs/browser/buffer.js"
 pin "geolib", to: "https://ga.jspm.io/npm:geolib@3.3.3/es/index.js"
+pin "lodash", to: "https://ga.jspm.io/npm:lodash@4.17.21/lodash.js"
