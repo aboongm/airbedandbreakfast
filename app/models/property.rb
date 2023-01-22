@@ -15,6 +15,8 @@ class Property < ApplicationRecord
 
     has_many_attached :images
     has_many :reviews, as: :reviewable
+    has_many :favorites, dependent: :destroy
+  has_many :favorited_users, through: :favorites, source: :user
 
     def address
         #  [address_1, address_2, city, state, country].compact.join(', ')
