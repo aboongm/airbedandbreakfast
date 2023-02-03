@@ -1,0 +1,59 @@
+<div data-controller="users-by-email-auth">
+  <div>
+    <div class="flex">
+      <div data-modal-target="closeButton" class="flex-none cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+          <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd" />
+        </svg>
+      </div>
+      <div class="grow">
+        <h3 class="pr-7 text-md leading-6 font-medium text-gray-900 text-center" id="modal-title">Log in or Sign up</h3>
+      </div>
+    </div>
+    <div class="relative py-4">
+      <div class="absolute inset-0 flex items-center" aria-hidden="true">
+        <div class="w-full border-t border-gray-300"></div>
+      </div>
+    </div>
+    <div>
+      <h4 class="text-2xl leading-6 text-gray-900 mt-2 font-medium">Welcome to Airbnb</h4>
+      <div data-users-by-email-auth-target="emailWrapper" class="relative mt-6 border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-black focus-within:border-black">
+        <label for="email" class="block text-xs font-medium text-gray-900">Email</label>
+        <input data-users-by-email-auth-target="email" type="text" name="email" id="email" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" placeholder="john@doe.com" />
+        <div data-users-by-email-auth-target="invalidSvg" class="hidden absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none" >
+          <svg class="h5 w-5 text-red-500" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z">
+            </svg>
+          </div>
+        </div>
+        <p data-users-by-email-auth-target="errorMessage" class="hidden mt-2 text-sm text-red-600" id="email-error">Your password must be more than 8 characters.</p>
+      </div>
+    </div>
+    <div class="my-5 sm:mt-6">
+      <button data-users-by-email-auth-target="submit" type="button" class="inline-flex items-center justify-center w-full px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indifo-700 airbnb-pink-gradient" >Continue</button>
+    </div>
+  </div>
+  <div class="relative">
+    <div class="absolute inset-0 flex items-center" aria-hidden="true">
+      <div class="w-full border-t border-gray-300"></div>
+    </div>
+    <div class="relative flex justify-center">
+      <span class="px-2 bg-white text-sm text-gray-500"> or </span>
+    </div>
+  </div>
+  <div class="my-5 sm:mt-6">
+    <button type="button" class="inline-flex items-center justify-center w-full px-6 py-3 border border-gray-800 text-base font-medium rounded-md shadow-sm text-gray-900 bg-white hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-gray-500" >
+      <svg class="-ml-1 mr-3 h-5 w-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="presentation" aria-hidden="true" focusable="false" style="height: 20px; width: 20px; display: block; fill: currentcolor;">
+        <defs>
+          <path id="a" d="M.001 0H24v23.854H.001z"></path>
+        </defs>
+        <g fill="none" fill-rule="evenodd">
+          <mask id="b" fill="#fff">
+            <use xlink:href="#a"></use>
+          </mask>
+          <path d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854V15.47H7.078V12h3.047V9.356c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.234 2.686.234v2.953H15.83c-1.491 0-1.956.925-1.956 1.874V12h3.328l-.532 3.469h-2.796v8.385C19.612 22.954 24 17.99 24 12" fill="#1877F2" mask="url(#b)"></path>
+          <path d="M16.671 15.469L17.203 12h-3.328V9.749c0-.949.465-1.874 1.956-1.874h1.513V4.922s-1.374-.234-2.686-.234c-2.741 0-4.533 1.66-4.533 4.668V12H7.078v3.469h3.047v8.385a12.09 12.09 0 003.75 0V15.47h2.796" fill="#FFF"></path>
+        </g>
+      </svg>
+      Continue with Facebook</button>
+  </div>

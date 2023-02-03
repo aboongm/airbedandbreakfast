@@ -1,26 +1,40 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-md w-full space-y-8" >
+    <div>
+      <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900" >Log in</h2>
+      <p class="mt-2 text-center text-sm text-gray-600" >
+        Or
+        <%= link_to "Sign up", new_user_registration_path, class: "font-medium text-red-600 hover:text-red-500" %>
+      </p>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "mt-8 space-y-6"}) do |f|  %>
+      <form class="mt-8 space-y-6" action="#" method="POST" >
+        <input class="hidden" name="remember" value="true" />
+        <div class="rounded-md shadow-sm -space-y-px">
+          <div>
+            <%= f.label :email, "Email Address", class: "sr-only" %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email Address", class: "appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md rounded-t-md focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm" %>
+          </div>
+          <div>
+            <%= f.label :password, "Password", class: "sr-only" %>
+            <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md rounded-t-md focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm" %>
+          </div>
+        </div>
+        <div class="flex items-center justify-between">
+          <% if devise_mapping.rememberable? %>
+            <div class="flex items-center">
+              <%= f.check_box :remember_me, class: "h-4 w-4 text-indigo-600 focus:ring-gray-500 border-gray-300 rounded" %>
+              <%= f.label :remember_me, class: "ml-2 block text-sm text-gray-900" %>
+            </div>
+          <% end %>
+          <div class="text-sm">
+            <a href="#" class="font-medium text-red-600 hovertext-red-500">Forget your password?</a>
+          </div>
+        </div>
+        <div>
+          <%= f.submit "Log in", class: "airbnb-pink-gradient focus:ring-2 focus:ring-offset-2 focus:ring-red-700 text-sm font-semibold leading-none text-white focus:outline-none bg-red-700 border rounded-none rounded-t-md rounded-b-md hover:bg-red-600 py-4 w-full" %>
+        </div>
+      </form>
+    <% end %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

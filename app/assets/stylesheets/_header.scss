@@ -1,6 +1,11 @@
 @import '_colors';
 
 // $airbnb-logo: #ff385c;
+
+.nav-container {
+  min-height: 80px;
+}
+
 .logo__link {
   svg {
     color: $airbnb-logo;
@@ -27,22 +32,22 @@
   z-index: 1;
 }
 
-.airbnb__hamburger {
-  width: 30px;
-}
+// .airbnb__hamburger {
+//   width: 30px;
+// }
 
-.header__left {
-  display: flex;
-  justify-content: flex-start;
-  flex: 1;
-  align-items: center;
-  height: 80px;
-}
-.header__right {
-  display: flex;
-  justify-content: flex-end;
-  flex: 1;
-}
+// .header__left {
+//   display: flex;
+//   justify-content: flex-start;
+//   flex: 1;
+//   align-items: center;
+//   height: 80px;
+// }
+// .header__right {
+//   display: flex;
+//   justify-content: flex-end;
+//   flex: 1;
+// }
 
 .invalid-inset-input-text-field {
   border-color: rgb(244, 61, 94) !important;
@@ -57,5 +62,11 @@
       border-color: rgb(244, 61, 94) !important;
     }
     color: rgb(244, 61, 94) !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .airbnb__search {
+    display: none;
   }
 }

@@ -1,36 +1,36 @@
-<div
-    data-controller="modal"
-    id="modal-wrapper"
-    class="hidden relative z-10"
-    aria-labelledby="modal-title"
-    role="dialog"
-    aria-modal="true"
-    data-action="click->modal#showModal"
+<div 
+  data-controller="modal" 
+  id="modal-wrapper"
+  class="hidden relative z-10" 
+  aria-labelledby="modal-title" 
+  role="dialog" 
+  aria-modal="true"
+  data-action="click->modal#showModal"
   >
   <div 
-        id="modal-backdrop" 
-        class="hidden fixed inset-0 bg-gray-700 bg-opacity-50"
-        data-transition-enter="transition ease-out duration-100"
-        data-transition-enter-start="opacity-0"
-        data-transition-enter-end="opacity-100"
-        data-transition-leave="ease-in duration-200"
-        data-transition-leave-start="opacity-100"
-        data-transition-leave-end="opacity-0"
-    >
-  </div>
+    id="modal-backdrop" 
+    class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+    data-transition-enter="transition ease-out duration-100"
+    data-transition-enter-start="opacity-0"
+    data-transition-enter-end="opacity-100"
+    data-transition-leave="ease-in duration-200"
+    data-transition-leave-start="opacity-100"
+    data-transition-leave-end="opacity-0"  
+  ></div>
   <div class="fixed z-10 inset-0 overflow-y-auto">
-    <div class="flex items-end sm:items-center justify-center min-h-full p-4 text-center sm:p-0">
+    <div class="flex items-center sm:items-cent justify-center min-h-full p-4 text-center sm:p-0">
       <div 
-                id="modal-panel" 
-                class="hidden border relative bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-xl sm:w-full sm:p-6"
-                data-transition-enter="transition ease-out duration-100"
-                data-transition-enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                data-transition-enter-end="opacity-100 translate-y-0 sm:scale-100"
-                data-transition-leave="ease-in duration-200"
-                data-transition-leave-start="opacity-100 translate-y-0 sm:scale-100"
-                data-transition-leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            >
-        <%= render 'shared/modal_content', oauth: 'shared/oauth', country_code: 'shared/country_code', email: 'shared/email' %>
+        id="modal-panel" 
+        class="hidden relative bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-xl sm:w-full sm:p-6"
+        data-transition-enter="transition ease-out duration-300"
+        data-transition-enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+        data-transition-enter-end="opacity-100 translate-y-0 sm:scale-100"
+        data-transition-leave="ease-in duration-200"
+        data-transition-leave-start="opacity-100 translate-y-0 sm:scale-100"
+        data-transition-leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+
+      >
+        <%= render modal_content %>
       </div>
     </div>
   </div>
